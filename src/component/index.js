@@ -1,0 +1,11 @@
+export { default as MyNavbar } from "./layout/Navbar/Navbar";
+export { default as Home } from "./pages/Home/Home";
+export { default as About } from "./pages/About/About";
+export { default as Contact } from "./pages/Contact/Contact";
+export { default as Docs } from "./pages/Docs/Docs";
+export { default as Footer } from "./layout/Footer";
+export { default as AllProperty } from "./pages/AllProperty/AllProperty";
+export { default as BoxShadow } from "./Property/BoxShadow/BoxShadow";
+export { default as Filter } from "./Property/Filter/Filter";
+export { default as TextShadow } from "./Property/TextShadow/TextShadow";
+export { default as BorderRadius } from "./Property/BorderRadius/BorderRadius";

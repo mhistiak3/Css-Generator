@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  About,
+  Contact,
+  Home,
+  MyNavbar,
+  Docs,
+  Footer,
+  AllProperty,
+  BoxShadow,
+  Filter,
+  TextShadow,
+  BorderRadius
+} from "./component";
+import { GlobalStyle } from "./component/GlobalStyle";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <GlobalStyle />
+      <MyNavbar />
+      <Switch>
+        {/* ============ Pages Route ========== */}
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/property" component={AllProperty} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/documentation" component={Docs} />
+
+        {/* ============ Property Route Route ========== */}
+        <Route exact path="/property/box-shadow" component={BoxShadow} />
+        <Route exact path="/property/filter" component={Filter} />
+        <Route exact path="/property/text-shadow" component={TextShadow} />
+        <Route exact path="/property/border-radius" component={BorderRadius} />
+      </Switch>
+      <Footer />
+    </Router>
   );
 }
 

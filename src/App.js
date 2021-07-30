@@ -10,9 +10,38 @@ import {
   BoxShadow,
   Filter,
   TextShadow,
-  BorderRadius
+  BorderRadius,
+  Rgba,
+  Gradient
 } from "./component";
 import { GlobalStyle } from "./component/GlobalStyle";
+
+let data = [
+  {
+    slug: "box-shadow",
+    component: BoxShadow,
+  },
+  {
+    slug: "filter",
+    component: Filter,
+  },
+  {
+    slug: "text-shadow",
+    component: TextShadow,
+  },
+  {
+    slug: "border-radius",
+    component: BorderRadius,
+  },
+  {
+    slug: "rgba",
+    component: Rgba,
+  },
+  {
+    slug: "Gradient",
+    component: Gradient,
+  },
+];
 
 function App() {
   return (
@@ -28,10 +57,9 @@ function App() {
         <Route exact path="/documentation" component={Docs} />
 
         {/* ============ Property Route Route ========== */}
-        <Route exact path="/property/box-shadow" component={BoxShadow} />
-        <Route exact path="/property/filter" component={Filter} />
-        <Route exact path="/property/text-shadow" component={TextShadow} />
-        <Route exact path="/property/border-radius" component={BorderRadius} />
+        {data.map((singleData,index) => (
+          <Route key={index} exact path={`/property/${singleData.slug}`} component={singleData.component} />
+        ))}
       </Switch>
       <Footer />
     </Router>

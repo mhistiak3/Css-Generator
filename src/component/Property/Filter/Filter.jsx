@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import { Column, Container } from "../../GlobalStyle";
+import { Column, Container,PropertyMainBox, PropertyShowBox } from "../../GlobalStyle";
 import {
-  BoxFilterProperty,
   FilterBox,
-  FilterPropertyBox,
 } from "./Filter.style";
 import InputRange from "../InputRange";
 
@@ -33,7 +31,7 @@ class Filter extends Component {
       Invert,
     } = this.state;
     return (
-      <BoxFilterProperty>
+      <PropertyMainBox>
         <h1>Generate Box Shadow</h1>
         <Container>
           <Column>
@@ -100,12 +98,12 @@ class Filter extends Component {
               filter={`grayscale(${Grayscale}%) sepia(${Sepia}%) blur(${Blur}px) brightness(${Brightness}%) hue-rotate(${HueRotate}deg) saturate(${Saturate}%) opacity(${Opacity}%) contrast(${Contrast}%) invert(${Invert}%)`}
             />
 
-            <FilterPropertyBox>
+            <PropertyShowBox>
               {`filter: grayscale(${Grayscale}%) sepia(${Sepia}%) blur(${Blur}px) brightness(${Brightness}%) hue-rotate(${HueRotate}deg) saturate(${Saturate}%) opacity(${Opacity}%) contrast(${Contrast}%) invert(${Invert}%)`}
-            </FilterPropertyBox>
+            </PropertyShowBox>
           </Column>
         </Container>
-      </BoxFilterProperty>
+      </PropertyMainBox>
     );
   }
 }

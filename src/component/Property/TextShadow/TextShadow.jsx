@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import { Column, Container } from "../../GlobalStyle";
+import { Column, Container,PropertyMainBox, PropertyShowBox } from "../../GlobalStyle";
 import {
-  TextShadowProperty,
   ShadowBox,
-  ShadowPropertyBox,
   ColorBox,
 } from "./TextShadow.style";
 
@@ -27,7 +25,7 @@ class TextShadow extends Component {
     let { horizontal, vertical, blur, color, colorBoxSet } = this.state;
     return (
       <>
-        <TextShadowProperty>
+        <PropertyMainBox>
           <h1>Generate Box Shadow</h1>
           <Container>
             <Column>
@@ -77,13 +75,13 @@ class TextShadow extends Component {
                 <h2>Text Shadow</h2>
               </ShadowBox>
 
-              <ShadowPropertyBox>
-                box-shadow:
+              <PropertyShowBox>
+                text-shadow:
                 {`${horizontal}px ${vertical}px ${blur}px  ${color}`}
-              </ShadowPropertyBox>
+              </PropertyShowBox>
             </Column>
           </Container>
-        </TextShadowProperty>
+        </PropertyMainBox>
       </>
     );
   }

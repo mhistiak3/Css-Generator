@@ -9,3 +9,5 @@ export { default as BoxShadow } from "./Property/BoxShadow/BoxShadow";
 export { default as Filter } from "./Property/Filter/Filter";
 export { default as TextShadow } from "./Property/TextShadow/TextShadow";
 export { default as BorderRadius } from "./Property/BorderRadius/BorderRadius";
+export { default as Rgba } from "./Property/Rgba/Rgba";
+export { default as Gradient } from "./Property/Gradient/Gradient";

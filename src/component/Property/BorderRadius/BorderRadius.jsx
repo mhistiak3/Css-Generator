@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import { Column, Container } from "../../GlobalStyle";
+import { Column, Container,PropertyMainBox, PropertyShowBox } from "../../GlobalStyle";
 import {
-  BorderRadiusProperty,
   BorderRadiusBox,
-  BorderRadiusPropertyBox,
 } from "./BorderRadius.style";
 
 import InputRange from "../InputRange";
@@ -24,7 +22,7 @@ class BorderRadius extends Component {
     let { one, tow, three, four, _one, _tow, _three, _four } = this.state;
     return (
       <>
-        <BorderRadiusProperty>
+        <PropertyMainBox>
           <h1>Generate Box Shadow</h1>
           <Container>
             <Column>
@@ -83,12 +81,12 @@ class BorderRadius extends Component {
                 borderRadius={`${one}% ${tow}% ${three}% ${four}% / ${_one}% ${_tow}% ${_three}% ${_four}%`}
               ></BorderRadiusBox>
 
-              <BorderRadiusPropertyBox>
+              <PropertyShowBox>
                 {`border-radius:${one}% ${tow}% ${three}% ${four}% / ${_one}% ${_tow}% ${_three}% ${_four}%`}
-              </BorderRadiusPropertyBox>
+              </PropertyShowBox>
             </Column>
           </Container>
-        </BorderRadiusProperty>
+        </PropertyMainBox>
       </>
     );
   }

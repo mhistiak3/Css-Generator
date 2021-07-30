@@ -21,7 +21,7 @@ let data = [
     },
     {
         id:6,
-        property:'linear-gradient()'
+        property:'Gradient'
     },
     {
         id:7,
